@@ -3,14 +3,26 @@ import React from "react";
 
 // задали тип props число
 type RatingPropsType = {
-    value: number
+    // value: number
     // или
-    // value: 0 | 1 | 2 | 3 | 4 | 5
+    value: 0 | 1 | 2 | 3 | 4 | 5
 }
 
 // выбор star
 export function Rating(props: RatingPropsType) {
     console.log("Rating rendering")
+/*компактный*/
+    return (
+        <div>
+            <Star selected={props.value > 0}/>
+            <Star selected={props.value >= 2}/>
+            <Star selected={props.value >= 3}/>
+            <Star selected={props.value >= 4}/>
+            <Star selected={props.value === 5}/>
+        </div>
+    )
+
+/* не компактный код star с использованием if
     if (props.value === 1) {
         return (
             <div>
@@ -75,6 +87,7 @@ export function Rating(props: RatingPropsType) {
                 <Star selected={false}/>
             </div>
         );
+ */
 }
 
 type StarPropsType = {

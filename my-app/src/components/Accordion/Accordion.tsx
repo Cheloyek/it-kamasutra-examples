@@ -8,19 +8,16 @@ type AccordionPropsType = {
 }
 
 // Accordion получил titleValue и передал его значение в AccordionTitle
+// условная отрисовка true/false
+//!props.collapsed меняет true на false, т.е если не true то покажет AccordionBody
 function Accordion(props: AccordionPropsType) {
     console.log("Accordion rendering")
-    if (props.collapsed === true) {
         return <div>
             <AccordionTitle title={props.titleValue}/>
-        </div>
-    } else {
-        return <div>
-            <AccordionTitle title={props.titleValue}/>
-            <AccordionBody/>
+            {/*props.collapsed === false && <AccordionBody/>*/}
+            {!props.collapsed && <AccordionBody/>}
         </div>
     }
-}
 
 type AccordionTitlePropsType = {
     title: string

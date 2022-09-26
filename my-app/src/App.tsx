@@ -3,11 +3,11 @@ import './App.css';
 import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating"; // import без default {}, имя должно совпадать
 
-function sum(a: number, b: number) {
-    alert(a + b)
-}
-sum(23, 12)
-sum(100, 300)
+// function sum(a: number, b: number) {
+//     alert(a + b)
+// }
+// sum(23, 12)
+// sum(100, 300)
 
 // function declaration
 // создан тег App
@@ -18,13 +18,13 @@ function App() {
   // обязана вернуть JSX
   return (
     <div>
-        <PageTitle title={"This is APP component"}/>
-        <PageTitle title={"My friends"}/>
-        Article 1
-        <Rating value={3}/>
-        <Accordion titleValue={"Menu"}, collapsed={true}/>
-        <Accordion titleValue={"Users"}, collapsed={false}/>
-        Article 2
+        {/*<PageTitle title={"This is APP component"}/>*/}
+        {/*<PageTitle title={"My friends"}/>*/}
+        {/*Article 1*/}
+        {/*<Rating value={3}/>*/}
+        <Accordion titleValue={"Menu"} collapsed={true}/>
+        <Accordion titleValue={"Users"} collapsed={false}/>
+        {/*Article 2*/}
         <Rating value={0}/>
         <Rating value={1}/>
         <Rating value={2}/>
